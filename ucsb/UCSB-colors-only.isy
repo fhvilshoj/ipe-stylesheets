@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipestyle SYSTEM "ipe.dtd">
-<ipestyle name="UCSBcolor">
+<ipestyle name="UCSB-colors-only">
 <color name="UCSBUsafaBlue" value="0 0.2745 0.5451"/>
 <color name="UCSBSunglow" value="1 0.8078 0.2039"/>
 <color name="UCSBSpaceCadet" value="0.0941 0.2 0.3647"/>
