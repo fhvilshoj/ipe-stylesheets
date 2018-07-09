@@ -13,6 +13,8 @@ for which I had to work, etc.
 2. To add a new style sheet into a document, select from the menu
    `Edit > Style sheets` (or hit the shortcut `Ctrl + Shift + S`),
    then browse for a new `.isy` style sheet by clicking `Add`.
+
+    **Tips:** Make sure that style sheets are located either within the same directory as the main document file, or inside one of the directories designated in [IPE configurations](http://ipe.otfried.org/manual/manual_40.html). 
 3. Occasionally, you will need to force updating the style sheets
    by selecting the menu `Edit > Update style sheets`
    (shortcut: `Ctrl + Shift + U`), then re-run the LaTeX build via
