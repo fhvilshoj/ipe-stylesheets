@@ -35,8 +35,8 @@
 <textstretch name="Huge" value="3.45"/>
 <textstretch name="small" value="3.0"/>
 <textstretch name="footnote" value="2.8"/>
-<textstretch name="script" value="2.6"/>
-<textstretch name="tiny" value="2.6"/>
+<textstretch name="script" value="2.4"/>
+<textstretch name="tiny" value="2.4"/>
 <symbolsize name="normal" value="9"/>
 <symbolsize name="large" value="15"/>
 <symbolsize name="small" value="6"/>
@@ -133,19 +133,12 @@
 </symbol>
 <preamble>
 \makeatletter
-
 \usepackage{etoolbox}
-\usepackage{ifxetex}
 
-\ifxetex
-\newrobustcmd\pgtitlefont{}
-\newrobustcmd\pgnumfont{}
-\newrobustcmd\pginfofont{}
-\else
-\newrobustcmd\pgtitlefont{\usefont{T1}{fdr}{b}{n}}
+\usepackage[T1]{fontenc}
+\newrobustcmd\pgtitlefont{\usefont{T1}{NotoSerif-TOsF}{eb}{n}}
 \newrobustcmd\pgnumfont{\usefont{T1}{fos}{b}{sc}}
 \newrobustcmd\pginfofont{\usefont{T1}{fos}{sb}{sc}}
-\fi
 
 \newrobustcmd\iffirstpage{\ifnumequal{1}{\arabic{ipePage}}}
 \renewrobustcmd\PageTitle[1]{{\pgtitlefont{#1}}}
@@ -157,7 +150,7 @@
 </preamble>
 <layout paper="1280 720" origin="80 60" frame="1120 560" skip="40" crop="no"/>
 <titlestyle pos="0 592" size="Large" color="title" halign="left" valign="baseline"/>
-<pagenumberstyle pos="0 -32" size="script" color="0.4" halign="left" valign="baseline" >\iffirstpage{}{\pgnumfont\ipeNumber{\arabic{ipePage}}{\arabic{ipePage}\,\Alph{ipeView}}}</pagenumberstyle>
+<pagenumberstyle pos="0 -32" size="script" color="0.4" halign="left" valign="baseline" >\iffirstpage{}{\pgnumfont\ipeNumber{\arabic{ipePage}}{\arabic{ipePage}\textperiodcentered\Alph{ipeView}}}</pagenumberstyle>
 <symbol name="Background" xform="yes"><group>
 <path fill="bars">
 -80 0 m
