@@ -1,13 +1,45 @@
-# IPE Stylesheets
+# IPE Style Sheets
 
-Collection of IPE stylesheets, such as color palettes for different corporate identities, etc., to be used with [the IPE Extensible Drawing Editor](http://ipe.otfried.org/).
+This repository contains a collection of IPE style sheets,
+such as to add extra color palettes for different corporate identities
+for which I had to work, etc.
 
-## How to add stylesheet to an IPE workflow
+## How to add a style sheet to an IPE document
 
-Choose from menu `Edit > Style sheets` (or hit the shortcut `Ctrl`+`Shift`+`S`), then add a new stylesheet by clicking `Add` and choose where the `.isy` file is located.
+1. First of all, you should already have installed
+   [the IPE Extensible Drawing Editor](http://ipe.otfried.org/)
+   from its website. Of course, you will also need LaTeX installed
+   in your machine in order to use IPE.
+2. To add a new style sheet into a document, select from the menu
+   `Edit > Style sheets` (or hit the shortcut `Ctrl + Shift + S`),
+   then browse for a new `.isy` style sheet by clicking `Add`.
+3. Occasionally, you will need to force updating the style sheets
+   by selecting the menu `Edit > Update style sheets`
+   (shortcut: `Ctrl + Shift + U`), then re-run the LaTeX build via
+   `File > Run Latex` (shortcut: `Ctrl + L`).
 
-## Available Stylesheets
+## Available style sheets
 
-Stylesheets in [brown/](brown/), [ucsb/](ucsb/), and [kbtg/](kbtg/) directories mainly defines color palettes which adhere to their respectively corporate identities. However, I am not responsible for any inaccuracies of the information in those files. I am also not claiming any rights to the designs or trademarks presented in those files.
+### Basic style sheets
 
-In directory [legacy/](legacy/), stylesheets [svgcolor.isy](legacy/svgcolor.isy) and [x11color.isy](legacy/x11color.isy) store color definitions which are equivalent to those defined in [xcolor](https://ctan.org/pkg/xcolor) package in LaTeX. Due to limitations of how colors are available in IPE editor, these two stylesheets conveniently provides the editor an access to those color definitions.
+Each style sheet in [basic](basic/) directory contains a basic
+functionality which would help writing IPE documents easier.
+
+- **[colors](basic/colors/)**: Contains definitions of different color palettes
+- **[presentations](basic/presentations)**: Contains page layout templates for presentations
+- **[fonts](basic/fonts/)**: Contains font configuration with LaTeX
+
+
+### Corporate Identities
+
+Style sheets for each corporate identity are located in its respective
+subdirectory under the main [corporates](corporates/) directory.
+In most cases, there is at least one style sheet which defines a color
+palettes for an organization for the sake of consistency.
+
+**Warning:** I am denying all responsibilities regarding any inaccuracies
+of any information or any assets in these files inside
+[corporates](corporates/) directory provided by me. I am also
+_not_ claiming any rights to the designs or trademarks presented in these
+files; they are provided only for convenience. Please make sure that you
+have the right to use these assets first.
