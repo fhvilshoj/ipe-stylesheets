@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipestyle SYSTEM "ipe.dtd">
-<ipestyle name="wide-presentation">
+<ipestyle name="presentation-16x9">
 <opacity name="10%" value="0.1"/>
 <opacity name="25%" value="0.25"/>
 <opacity name="50%" value="0.5"/>
@@ -27,16 +27,16 @@
 <textsize name="footnote" value="\footnotesize"/>
 <textsize name="script" value="\scriptsize"/>
 <textsize name="tiny" value="\tiny"/>
-<textstretch name="normal" value="3.25"/>
+<textstretch name="normal" value="3.2"/>
 <textstretch name="large" value="3.25"/>
-<textstretch name="Large" value="3.25"/>
-<textstretch name="LARGE" value="3.25"/>
-<textstretch name="huge" value="3.25"/>
-<textstretch name="Huge" value="3.25"/>
-<textstretch name="small" value="3.25"/>
-<textstretch name="footnote" value="3.25"/>
-<textstretch name="script" value="3.25"/>
-<textstretch name="tiny" value="3.25"/>
+<textstretch name="Large" value="3.3"/>
+<textstretch name="LARGE" value="3.35"/>
+<textstretch name="huge" value="3.4"/>
+<textstretch name="Huge" value="3.45"/>
+<textstretch name="small" value="3.0"/>
+<textstretch name="footnote" value="2.8"/>
+<textstretch name="script" value="2.6"/>
+<textstretch name="tiny" value="2.6"/>
 <symbolsize name="normal" value="9"/>
 <symbolsize name="large" value="15"/>
 <symbolsize name="small" value="6"/>
@@ -129,70 +129,27 @@
 -1 0 m -2.0 0.333 l -2.0 -0.333 l h
 </path></symbol>
 <symbol name="footer/title-author">
-<text transformations="translations" pos="1120 -32" stroke="black" type="label" width="171.352" height="11.1944" depth="3.108" halign="right" valign="baseline" size="script" stroke="0.4">{\usefont{T1}{fos}{sb}{sc}\MakeLowercase{\theshorttitle} | \MakeLowercase{\theauthor}}</text>
+<text transformations="translations" pos="1120 -32" stroke="black" type="label" width="171.352" height="11.1944" depth="3.108" halign="right" valign="baseline" size="script" stroke="0.4">{\pginfofont\MakeLowercase{\theshorttitle} | \MakeLowercase{\theauthor}}</text>
 </symbol>
 <preamble>
 \makeatletter
+
 \usepackage{etoolbox}
-\newrobustcmd\iffirstpage{\ifnumequal{1}{\arabic{ipePage}}}
-\renewrobustcmd{\emph}[1]{\textbf{\color{DodgerBlue3!70!SlateGray4}#1}}
+\usepackage{ifxetex}
 
-%%%%%%%%%%%%%%%
-% SETUP FONTS %
-%%%%%%%%%%%%%%%
-
-\usepackage[T1]{fontenc}
-\usepackage{droidserif}
-\usepackage{lato}
-\usepackage{inconsolata}
-\usepackage{fouriernc}
-
-\def\familydefault{\sfdefault}
-\def\rmdefault{fdr}
-\def\sfdefault{lato-TOsF}
-\def\ttdefault{zi4}
-\def\zifour@scaled{s*[0.925]}
-\def\zifour@narrow{}
-\def\zifour@opt{0}
-\def\zifour@altopt{2}
-\def\zifour@spc{\hyphenchar\font=\m@ne}
-
-\usepackage{mweights}
-\def\bfseries@rm{b}
-\def\mdseries@sf{l}
-\def\bfseries@sf{eb}
-
-\newrobustcmd\semibold{\fontseries{sb}}
-\newrobustcmd{\oldstyle}[1]{{\usefont{T1}{SourceSerifPro-TOsF}{\seriesdefault}{\shapedefault}{#1}}}
+\ifxetex
+\newrobustcmd\pgtitlefont{}
+\newrobustcmd\pgnumfont{}
+\newrobustcmd\pginfofont{}
+\else
 \newrobustcmd\pgtitlefont{\usefont{T1}{fdr}{b}{n}}
 \newrobustcmd\pgnumfont{\usefont{T1}{fos}{b}{sc}}
+\newrobustcmd\pginfofont{\usefont{T1}{fos}{sb}{sc}}
+\fi
 
-\usepackage{setspace}
-\setstretch{1.2}
-
-%%%%%%%%%%%%%%%%
-% SETUP TABLES %
-%%%%%%%%%%%%%%%%
-
-\usepackage{array,booktabs}
-
-%%%%%%%%%%%%%%
-% SETUP MATH %
-%%%%%%%%%%%%%%
-
-\usepackage{fdsymbol}
-\usepackage{fontawesome}
-\usepackage[%
-    activate={true,nocompatibility},final,tracking=true,letterspace=40,%
-    kerning=true,spacing=true,factor=1150,stretch=15,shrink=15%
-]{microtype}
-\microtypecontext{spacing=nonfrench}
-
-%%%%%%%%%%%%%%%%%%%%
-% SETUP PAGE TITLE %
-%%%%%%%%%%%%%%%%%%%%
-
+\newrobustcmd\iffirstpage{\ifnumequal{1}{\arabic{ipePage}}}
 \renewrobustcmd\PageTitle[1]{{\pgtitlefont{#1}}}
+
 \newrobustcmd\thetitle{}
 \newrobustcmd\theshorttitle{}
 \newrobustcmd\theauthor{}
