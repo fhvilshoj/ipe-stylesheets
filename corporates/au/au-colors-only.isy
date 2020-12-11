@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipestyle SYSTEM "ipe.dtd">
+<ipestyle name="AU Colors Only">
+
+<color name="Blå - Pantone 287 EC" value="0.00000 0.23922 0.45098"/>
+<color name="Blå (mørk) - Pantone 289 EC" value="0.00000 0.14510 0.27451"/>
+<color name="Lilla - Pantone 2665 EC" value="0.39608 0.35294 0.62353"/>
+<color name="Lilla (mørk) - Pantone 5265 EC" value="0.15686 0.10980 0.25490"/>
+<color name="Cyan - Pantone Process Cyan EC" value="0.21569 0.62745 0.79608"/>
+<color name="Cyan (mørk) - Pantone 3025 EC" value="0.00000 0.24314 0.36078"/>
+<color name="Turkis - Pantone 326 EC" value="0.00000 0.67059 0.64314"/>
+<color name="Turkis (mørk) - Pantone 567 EC" value="0.00000 0.27059 0.26275"/>
+<color name="Grøn - Pantone 376 EC" value="0.54510 0.67843 0.24706"/>
+<color name="Grøn (mørk) - Pantone 574 EC" value="0.25882 0.34510 0.12941"/>
+<color name="Gul - Pantone 7408 EC" value="0.98039 0.73333 0.00000"/>
+<color name="Gul (mørk) - Pantone 455 EC" value="0.38824 0.29412 0.01176"/>
+<color name="Orange - Pantone 144 EC" value="0.93333 0.49804 0.00000"/>
+<color name="Orange (mørk) - Pantone 463 EC" value="0.37255 0.20392 0.03137"/>
+<color name="Rød - Pantone 485 EC" value="0.88627 0.00000 0.10196"/>
+<color name="Rød (mørk) - Pantone 490 EC" value="0.35686 0.04706 0.04706"/>
+<color name="Magenta - Pantone Process Magenta EC" value="0.88627 0.00000 0.47843"/>
+<color name="Magenta (mørk) - Pantone 229 EC" value="0.37255 0.00000 0.18824"/>
+<color name="Grå - Pantone Cool Gray 7 EC" value="0.52941 0.52941 0.52941"/>
+<color name="Grå (mørk) - Pantone 11 C" value="0.29412 0.29412 0.29020"/>
+
+</ipestyle>
